@@ -22,3 +22,12 @@ checkpoints/*.pth
 !logs/.gitkeep
 !results/.gitkeep
 !checkpoints/.gitkeep
+
+# LaTeX build intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
