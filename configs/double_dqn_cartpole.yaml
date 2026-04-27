@@ -1,0 +1,35 @@
+experiment_name: double_dqn_cartpole
+method: double_dqn
+env_id: CartPole-v1
+seeds: [0, 1, 2]
+device: auto
+max_episodes: 160
+max_steps_per_episode: 500
+solved_return: 475
+
+network:
+  hidden_sizes: [128, 128]
+
+optimization:
+  gamma: 0.99
+  learning_rate: 0.001
+  batch_size: 64
+  replay_capacity: 50000
+  learning_starts: 1000
+  train_frequency: 1
+  target_update_interval: 500
+  gradient_clip_norm: 10.0
+
+exploration:
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 8000
+
+evaluation:
+  eval_interval: 20
+  eval_episodes: 5
+
+paths:
+  log_dir: logs
+  result_dir: results
+  checkpoint_dir: checkpoints

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data8007-rl-project"
+version = "0.1.0"
+description = "Reproducible DATA8007 project comparing DQN and Double DQN on CartPole-v1"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+where = ["src"]

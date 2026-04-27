@@ -1,0 +1,16 @@
+name: data8007-project
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - pytorch-cuda=12.1
+  - numpy
+  - pandas
+  - matplotlib
+  - pyyaml
+  - pip:
+      - gymnasium[classic-control]==0.29.1
