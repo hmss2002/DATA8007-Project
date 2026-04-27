@@ -1,0 +1,49 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2025}[2025/04/27 NeurIPS 2025 style for DATA8007 report]
+
+\newif\if@neuripsfinal
+\newif\if@neuripspreprint
+\newif\if@neuripsnatbib
+\@neuripsnatbibtrue
+\DeclareOption{final}{\@neuripsfinaltrue\@neuripspreprintfalse}
+\DeclareOption{preprint}{\@neuripspreprinttrue\@neuripsfinalfalse}
+\DeclareOption{nonatbib}{\@neuripsnatbibfalse}
+\ProcessOptions\relax
+
+\RequirePackage[letterpaper,margin=1in]{geometry}
+\RequirePackage{times}
+\RequirePackage{helvet}
+\RequirePackage{xcolor}
+
+\makeatletter
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+\definecolor{neuripsblue}{RGB}{35,55,95}
+\definecolor{neuripsgray}{RGB}{90,90,90}
+
+\renewcommand{\maketitle}{%
+  \begin{center}
+    {\LARGE\bfseries\@title\par}
+    \vskip 0.7em
+    {\large\@author\par}
+    \ifx\@date\@empty\else\vskip 0.4em{\small\color{neuripsgray}\@date\par}\fi
+    \vskip 0.8em
+    {\small\color{neuripsgray}\if@neuripsfinal Final report\else NeurIPS 2025-style preprint report\fi}\par
+  \end{center}
+  \vskip 0.6em
+}
+
+\renewenvironment{abstract}{%
+  \begin{center}\bfseries Abstract\end{center}
+  \begin{quote}\small
+}{%
+  \end{quote}
+  \vskip 0.6em
+}
+
+\newcommand{\AND}{\end{tabular}\hfil\linebreak[0]\hfil\begin{tabular}[t]{c}}
+\makeatother

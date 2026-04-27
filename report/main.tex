@@ -1,6 +1,14 @@
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry} \usepackage{amsmath,amssymb,booktabs,graphicx,float,hyperref}
-\title{DQN and Double DQN for CartPole-v1: A Reproducible DATA8007 Study} \author{hmss2002} \date{DATA8007 Foundations of Sequential Decision-Making [2A, 2025]} \begin{document} \maketitle
+\documentclass{article}
+\usepackage[preprint,nonatbib]{neurips_2025}
+\usepackage{amsmath,amssymb,booktabs,graphicx,float,hyperref}
+
+\title{DQN and Double DQN for CartPole-v1: A Reproducible DATA8007 Study}
+\author{Jianyu Zhang\\Student number: 3030114491}
+\date{DATA8007 Foundations of Sequential Decision-Making [2A, 2025]}
+
+\begin{document}
+\maketitle
+
 \begin{abstract} This report compares Deep Q-Networks (DQN) and Double DQN on Gymnasium CartPole-v1 using a reproducible PyTorch implementation. Both methods use experience replay, a target network, epsilon-greedy exploration, and identical hyperparameters across three random seeds. The experiments ran on an NVIDIA L40S GPU. Under a 160-episode budget, neither method reached the solved threshold of 475 return. Double DQN achieved higher aggregate returns: its best evaluation return was $250.93 \pm 74.79$, compared with $166.60 \pm 48.91$ for DQN. \end{abstract}
 \section{Introduction} Reinforcement learning addresses sequential decision-making problems where an agent learns from rewards produced by interaction with an environment. This project studies value-based deep reinforcement learning on CartPole-v1. DQN is used as the baseline because it extends Q-learning to continuous observations with a neural network. Double DQN is used as the comparison method because it separates action selection from action evaluation in the target, which can reduce overestimation bias.
 The research questions are: how reliably DQN improves under fixed hyperparameters, whether Double DQN improves return or evaluation stability, and whether observed differences are robust across seeds. The project is intentionally small so that the full workflow, including training logs, summaries, plots, and report files, can be reproduced from scripts.

@@ -31,3 +31,7 @@ checkpoints/*.pth
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+# Beamer build intermediates
+*.nav
+*.snm
+*.vrb
