@@ -1,0 +1,9 @@
+{
+  "evaluation_curve": "results/figures/evaluation_curves.png",
+  "learning_curve": "results/figures/learning_curves.png",
+  "methods": [
+    "double_dqn",
+    "dqn"
+  ],
+  "summary_csv": "results/summary.csv"
+}

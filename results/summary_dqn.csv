@@ -1,0 +1,4 @@
+method,seed,device,episodes,global_step,final_return,final_moving_avg_50,best_eval_return,best_eval_episode,solved_episode,train_log,eval_log,best_checkpoint,final_checkpoint
+dqn,0,cuda,160,4833,122.0,43.56,223.0,120,,logs/train_dqn_seed0.csv,logs/eval_dqn_seed0.csv,checkpoints/dqn_seed0_best.pt,checkpoints/dqn_seed0_final.pt
+dqn,1,cuda,160,4031,49.0,32.68,135.8,140,,logs/train_dqn_seed1.csv,logs/eval_dqn_seed1.csv,checkpoints/dqn_seed1_best.pt,checkpoints/dqn_seed1_final.pt
+dqn,2,cuda,160,4335,100.0,38.86,141.0,140,,logs/train_dqn_seed2.csv,logs/eval_dqn_seed2.csv,checkpoints/dqn_seed2_best.pt,checkpoints/dqn_seed2_final.pt

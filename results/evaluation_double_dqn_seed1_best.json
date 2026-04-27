@@ -1,0 +1,9 @@
+{
+  "checkpoint": "checkpoints/double_dqn_seed1_best.pt",
+  "device": "cuda",
+  "episodes": 20,
+  "mean_length": 316.4,
+  "mean_return": 316.4,
+  "method": "double_dqn",
+  "std_return": 47.401898696149296
+}

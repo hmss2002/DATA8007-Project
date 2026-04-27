@@ -1,0 +1,16 @@
+{
+  "best_checkpoint": "checkpoints/dqn_seed1_best.pt",
+  "best_eval_episode": 140,
+  "best_eval_return": 135.8,
+  "device": "cuda",
+  "episodes": 160,
+  "eval_log": "logs/eval_dqn_seed1.csv",
+  "final_checkpoint": "checkpoints/dqn_seed1_final.pt",
+  "final_moving_avg_50": 32.68,
+  "final_return": 49.0,
+  "global_step": 4031,
+  "method": "dqn",
+  "seed": 1,
+  "solved_episode": null,
+  "train_log": "logs/train_dqn_seed1.csv"
+}

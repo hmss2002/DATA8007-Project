@@ -1,0 +1,9 @@
+method,seed,episode,global_step,mean_return,std_return,mean_length,device
+double_dqn,2,20,459,9.0,0.0,9.0,cuda
+double_dqn,2,40,932,9.0,0.8944271909999159,9.0,cuda
+double_dqn,2,60,1344,9.8,1.1661903789690602,9.8,cuda
+double_dqn,2,80,1894,12.8,6.615134163416491,12.8,cuda
+double_dqn,2,100,2403,164.6,15.80632784678339,164.6,cuda
+double_dqn,2,120,3250,152.4,23.703164345715532,152.4,cuda
+double_dqn,2,140,4549,113.8,17.02233826476257,113.8,cuda
+double_dqn,2,160,5837,99.0,4.381780460041329,99.0,cuda

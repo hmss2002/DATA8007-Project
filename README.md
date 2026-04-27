@@ -71,9 +71,28 @@ Or run individual steps:
 python scripts/train.py --config configs/dqn_cartpole.yaml
 python scripts/train.py --config configs/double_dqn_cartpole.yaml
 python scripts/plot_results.py --log-dir logs --output-dir results/figures
-python scripts/evaluate.py --config configs/dqn_cartpole.yaml --checkpoint checkpoints/dqn_seed0.pt
+python scripts/evaluate.py --config configs/dqn_cartpole.yaml --checkpoint checkpoints/dqn_seed0_best.pt
 ```
+
+## Results from generated run
+
+These numbers are produced by `bash scripts/run_all.sh` on the SSH GPU node with `torch 2.8.0+cu128`, `gymnasium 0.29.1`, and `NVIDIA L40S`. Results are saved in `results/summary.csv` and should be regenerated, not edited by hand.
+
+| Method | Seeds | Final return mean +/- std | Final 50-episode MA mean +/- std | Best eval return mean +/- std |
+| --- | ---: | ---: | ---: | ---: |
+| DQN | 3 | 90.33 +/- 37.45 | 38.37 +/- 5.46 | 166.60 +/- 48.91 |
+| Double DQN | 3 | 160.33 +/- 57.84 | 60.09 +/- 17.75 | 250.93 +/- 74.79 |
+
+No seed reached the configured solved threshold of 475 within 160 training episodes. In this short run, Double DQN produced higher aggregate final and best-evaluation returns, but the variance is large and the comparison should be discussed as a small-budget experiment rather than a definitive benchmark result.
+
+Generated artifacts:
+
+- `logs/train_*.csv` and `logs/eval_*.csv`
+- `results/summary.csv`, method-level CSVs, and seed-level JSON summaries
+- `results/figures/learning_curves.png`
+- `results/figures/evaluation_curves.png`
+- `results/evaluation_*_best.json` from fixed-seed checkpoint evaluation
 
 ## Current status
 
-The README is written first to define the project scope and reproducibility plan. Code, configs, experiment outputs, report skeleton, presentation outline, git commits, and GitHub push are implemented afterward.
+The project contains the planned modular code, configs, clean environment files, generated logs/results/figures, report skeleton, presentation outline, and reproducibility scripts. Binary model checkpoints are saved locally under `checkpoints/` but ignored by git to keep the repository lightweight.

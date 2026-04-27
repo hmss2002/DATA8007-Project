@@ -1,0 +1,16 @@
+{
+  "best_checkpoint": "checkpoints/double_dqn_seed2_best.pt",
+  "best_eval_episode": 100,
+  "best_eval_return": 164.6,
+  "device": "cuda",
+  "episodes": 160,
+  "eval_log": "logs/eval_double_dqn_seed2.csv",
+  "final_checkpoint": "checkpoints/double_dqn_seed2_final.pt",
+  "final_moving_avg_50": 62.34,
+  "final_return": 95.0,
+  "global_step": 5837,
+  "method": "double_dqn",
+  "seed": 2,
+  "solved_episode": null,
+  "train_log": "logs/train_double_dqn_seed2.csv"
+}
