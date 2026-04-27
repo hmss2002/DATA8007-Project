@@ -14,7 +14,7 @@ dist/
 .idea/
 .DS_Store
 
-# Large generated artifacts
+# Large local artifacts
 checkpoints/*.pt
 checkpoints/*.pth
 
